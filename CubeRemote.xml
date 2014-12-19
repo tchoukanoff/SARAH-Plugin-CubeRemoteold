@@ -1,0 +1,423 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleCubeRemote" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+    <rule id="ruleCubeRemote" scope="public">
+        <example>Appaire le cube</example>
+
+        <tag>out.action=new Object(); </tag>
+
+        <item>
+            Sarah
+            <one-of>
+                <item>
+<!-- Item 1 (Début de phrase) -->
+                    <one-of>
+<!-- Volume (Get's functions) -->
+                        <item>Quel est le volume
+                            <tag>
+                                out.action.ttsAction = "Le volume est de x %";
+                                out.action.CubeAction = "GetVolumeState";
+                            </tag>
+                        </item>
+<!-- Pairing's -->
+                        <item>Désappaire
+                            <tag>
+                                out.action.ttsAction = "Le cube est désappairé";
+                                out.action.CubeAction = "UnregisterSmartPhone";
+                            </tag>
+                        </item>
+                        <item>Vérifie l'appairage
+                            <tag>
+                                out.action.ttsAction = "L'état de l'appairage est affiché";
+                                out.action.CubeAction ="IsRegisteredSmartPhone";
+                            </tag>
+                        </item>
+                        <item>Affiche le code
+                            <tag>
+                                out.action.ttsAction = "Le code d'appairage est affiché";
+                                out.action.CubeAction = "RequestPairing";
+                            </tag>
+                        </item>
+                        <item>Appaire
+                            <tag>
+                                out.action.ttsAction = "Le Cube est appairé";
+                                out.action.CubeAction = "RegisterSmartPhone";
+                            </tag>
+                        </item>
+<!-- Volume (Send Keys) -->
+                        <item>Monte le son
+                            <tag>
+                                out.action.ttsAction = "Le volume est monté";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57347";
+                            </tag>
+                        </item>
+                        <item>Baisse le son
+                            <tag>
+                                out.action.ttsAction = "Le volume est baissé";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57348";
+                            </tag>
+                        </item>
+                        <item>Coupe le son
+                            <tag>
+                                out.action.ttsAction = "Le son est coupé";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "Mute : 57349";
+                            </tag>
+                        </item>
+                        <item>Remet le son
+                            <tag>
+                                out.action.ttsAction = "Le son est remis";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "Mute : 57349";
+                            </tag>
+                        </item>
+<!-- Touches Numériques -->
+                        <item>Touche 0
+                            <tag>
+                                out.action.ttsAction = "Touche 0 envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58112";
+                            </tag>
+                        </item>
+                        <item>Touche 1
+                            <tag>
+                                out.action.ttsAction = "Touche 1 envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58113";
+                            </tag>
+                        </item>
+                        <item>Touche 2
+                            <tag>
+                                out.action.ttsAction = "Touche 2 envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58114";
+                            </tag>
+                        </item>
+                        <item>Touche 3
+                            <tag>
+                                out.action.ttsAction = "Touche 3 envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58115";
+                            </tag>
+                        </item>
+                        <item>Touche 4
+                            <tag>
+                                out.action.ttsAction = "Touche 4 envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58116";
+                            </tag>
+                        </item>
+                        <item>Touche 5
+                            <tag>
+                                out.action.ttsAction = "Touche 5 envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58117";
+                            </tag>
+                        </item>
+                        <item>Touche 6
+                            <tag>
+                                out.action.ttsAction = "Touche 6 envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58118";
+                            </tag>
+                        </item>
+                        <item>Touche 7
+                            <tag>
+                                out.action.ttsAction = "Touche 7 envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58119";
+                            </tag>
+                        </item>
+                        <item>Touche 8
+                            <tag>
+                                out.action.ttsAction = "Touche 8 envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58120";
+                            </tag>
+                        </item>
+                        <item>Touche 9
+                            <tag>
+                                out.action.ttsAction = "Touche 9 envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58121";
+                            </tag>
+                        </item>
+<!-- Navigation -->
+                        <item>Touche haut
+                            <tag>
+                                out.action.ttsAction = "Touche haut, envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57600";
+                            </tag>
+                        </item>
+                        <item>Touche bas
+                            <tag>
+                                out.action.ttsAction = "Touche bas, envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57601";
+                            </tag>
+                        </item>
+                        <item>Touche gauche
+                            <tag>
+                                out.action.ttsAction = "Touche gauche, envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57602";
+                            </tag>
+                        </item>
+                        <item>Touche droite
+                            <tag>
+                                out.action.ttsAction = "Touche droite, envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57603";
+                            </tag>
+                        </item>
+                        <item>Touche OK
+                            <tag>
+                                out.action.ttsAction = "Touche OK, envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57345";
+                            </tag>
+                        </item>
+                        <item>Touche retour
+                            <tag>
+                                out.action.ttsAction = "Touche retour, envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57346";
+                            </tag>
+                        </item>
+                        <item>Touche sortie
+                            <tag>
+                                out.action.ttsAction = "Touche sortie, envoyée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57357";
+                            </tag>
+                        </item>
+<!-- Affichages -->
+                        <item>Affiche le menu
+                            <tag>
+                                out.action.ttsAction = "Le menu est affiché";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "61184";
+                            </tag>
+                        </item>
+                        <item>Affiche le guide
+                            <tag>
+                                out.action.ttsAction = "Le guide est affiché";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57355";
+                            </tag>
+                        </item>
+                        <item>Affiche les infos
+                            <tag>
+                                out.action.ttsAction = "Les infos sont affichées";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "61185";
+                            </tag>
+                        </item>
+                      <item>quitte le menu
+                            <tag>
+                                out.action.ttsAction = "je quitte le menu";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57357";
+                            </tag>
+                        </item>
+<!-- Multimédia -->
+                        <item>lis <!-- " + Sur le cube" -->
+                            <tag>
+                                out.action.ttsAction = "Lecture en cours";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58368";
+                            </tag>
+                        </item>
+                        <item>Met en pause
+                            <tag>
+                                out.action.ttsAction = "Le cube est en pause";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58369";
+                            </tag>
+                        </item>
+                        <item>Avance
+                            <tag>
+                                out.action.ttsAction = "Avance en cours";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58372";
+                            </tag>
+                        </item>
+                        <item>Recule
+                            <tag>
+                                out.action.ttsAction = "Lecture en cours";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "58374";
+                            </tag>
+                        </item>
+<!-- Channels (Set) -->
+                        <item>Chaine suivante
+                            <tag>
+                                out.action.ttsAction = "La chaine suivante est sélectionnée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57350";
+                            </tag>
+                        </item>
+                        <item>Chaine précédente
+                            <tag>
+                                out.action.ttsAction = "La chaine précédente est sélectionnée";
+                                out.action.CubeAction = "SendKey";
+                                out.action.CubeKey = "57351";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 1
+                            <tag>
+                                out.action.ttsAction = "La chaîne 1 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "1-3d0a2a1-1.442.2329";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 2
+                            <tag>
+                                out.action.ttsAction = "La chaîne 2 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "2-3d0a2a1-1.440.2462";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 3
+                            <tag>
+                                out.action.ttsAction = "La chaîne 3 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "3-3d0a2a1-1.430.2010";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 4
+                            <tag>
+                                out.action.ttsAction = "La chaîne 4 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "4-3d0a2a1-1.438.2261";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 5
+                            <tag>
+                                out.action.ttsAction = "La chaîne 5 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "5-3d0a2a1-1.44c.2200";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 6
+                            <tag>
+                                out.action.ttsAction = "La chaîne 6 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "6-3d0a2a1-1.440.245e";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 7
+                            <tag>
+                                out.action.ttsAction = "La chaîne 7 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "7-3d0a2a1-1.440.2458";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 8
+                            <tag>
+                                out.action.ttsAction = "La chaîne 8 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "8-3d0a2a1-1.448.21ad";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 10
+                            <tag>
+                                out.action.ttsAction = "La chaîne 10 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "10-3d0a2a1-1.438.2263";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 11
+                            <tag>
+                                out.action.ttsAction = "La chaîne 11 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "11-3d0a2a1-1.438.2264";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 12
+                            <tag>
+                                out.action.ttsAction = "La chaîne 12 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "12-3d0a2a1-1.438.2266";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 13
+                            <tag>
+                                out.action.ttsAction = "La chaîne 13 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "13-3d0a2a1-1.438.2265";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 14
+                            <tag>
+                                out.action.ttsAction = "La chaîne 14 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "14-3d0a2a1-1.438.2262";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 15
+                            <tag>
+                                out.action.ttsAction = "La chaîne 15 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "15-3d0a2a1-1.44a.2392";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 16
+                            <tag>
+                                out.action.ttsAction = "La chaîne 16 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "16-3d0a2a1-1.44a.23ec";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 84
+                            <tag>
+                                out.action.ttsAction = "La chaîne 84 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "84-3d0a2a1-1.43e.26ad";
+                            </tag>
+                        </item>
+                        <item>Met la chaîne 85
+                            <tag>
+                                out.action.ttsAction = "La chaîne 85 est affichée";
+                                out.action.CubeAction = "SetSelectedChannel";
+                                out.action.CubeKey = "85-3d0a2a1-1.43c.24bf";
+                            </tag>
+                        </item>
+                    </one-of>
+<!-- Item 2 (Choix du genre) -->
+                    <item repeat="0-1">
+                        <one-of>
+                            <item>du
+                                <tag>out.action.gender="du ";</tag>
+                            </item>
+                            <item>le
+                                <tag>out.action.gender="le ";</tag>
+                            </item>
+                            <item>sur le
+                                <tag>out.action.gender="sur le ";</tag>
+                            </item>
+                            <item>de la télécommande du
+                                <tag>out.action.gender="de la télécommande du";</tag>
+                            </item>
+                        </one-of>
+<!-- Item 3 (Fin de Phrase) -->
+                        <one-of>
+                            <item>Cube
+                            </item>
+                        </one-of>
+                    </item>
+                </item>
+            </one-of>
+<!-- Item 4 (facultatif) politesse -->
+            <item repeat="0-1">
+                <one-of>
+                    <item>S'il te plait</item>
+                    <item>Si il te plait</item>
+                    <item>Merci</item>
+                </one-of>
+            </item>
+        </item>
+        <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/CubeRemote";</tag>
+    </rule>
+</grammar>

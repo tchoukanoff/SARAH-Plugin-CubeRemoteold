@@ -1,0 +1,14 @@
+
+.plugin-gridster.CubeRemote .front {
+  background: #FFFFFF url('images/cube.jpg') center 35px;
+  background-size:   185px 120px;
+  background-repeat: no-repeat;
+}
+.plugin-gridster.CubeRemote .logo {
+  left: 10px; 
+  width: 70%;
+}
+
+.plugin-gridster.CubeRemote .back {
+  background: #FFFFFF;
+}
